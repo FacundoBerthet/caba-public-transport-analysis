@@ -11,7 +11,6 @@ def normalize_strings(s):
     s = str(s).strip()
     s = s.upper()
     s = re.sub(r"\s+", " ", s)
-    s = re.sub
     s = re.sub(r"[^A-Z0-9 ]", "", s)
 
     return s
