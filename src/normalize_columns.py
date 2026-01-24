@@ -12,6 +12,8 @@ def normalize_columns(index_cols):
         .str.lower()
         .str.replace(r"\s+", "_", regex=True)
         .str.replace(r"[^a-z0-9_]", "", regex=True)
+        .str.replace(r"_+", "_", regex=True)
+        .str.strip("_")
     )
 
     return pd.Index(series_cols)
