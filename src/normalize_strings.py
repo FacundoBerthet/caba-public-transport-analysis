@@ -1,7 +1,7 @@
 import pandas as pd
 import re
 
-def normalize_strings(s):
+def normalize_strings(s, keep_replacement_char=False, keep_question_mark=False):
     """
     Normalize a string: strip, collapse spaces, uppercase remove all except A-Z, 0-9, and spaces.
     """
@@ -11,6 +11,16 @@ def normalize_strings(s):
     s = str(s).strip()
     s = s.upper()
     s = re.sub(r"\s+", " ", s)
-    s = re.sub(r"[^A-Z0-9 ]", "", s)
+
+    extra = ""
+    if keep_replacement_char:
+        extra += "\uFFFD"
+    if keep_question_mark:
+        extra += "?"
+
+    # Remove anything not in A-Z, 0-9, space, or the requested extras.
+    base = "A-Z0-9 Ñ"
+    pattern = f"[^{base}{extra}]"
+    s = re.sub(pattern, "", s)
 
     return s
