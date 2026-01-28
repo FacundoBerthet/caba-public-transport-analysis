@@ -3,5 +3,6 @@
 
 *.db
 
+data/processed/*
 
 .ipynb_checkpoints/
