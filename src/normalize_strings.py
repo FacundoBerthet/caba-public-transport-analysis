@@ -11,6 +11,9 @@ def normalize_strings(s, keep_replacement_char=False, keep_question_mark=False, 
     
     s = str(s).strip()
     s = s.upper()
+    
+    # convert separators to spaces
+    s = re.sub(r"[./,_-]+", " ", s)
     s = re.sub(r"\s+", " ", s)
 
     extra = ""
