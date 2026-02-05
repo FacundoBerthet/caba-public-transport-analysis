@@ -5,4 +5,5 @@ geopandas
 pyarrow
 plotly
 shapely
+fiona
 pyproj
