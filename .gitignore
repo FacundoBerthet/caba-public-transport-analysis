@@ -1,9 +1,6 @@
 .env
 *.env
 
-*.db
-
-data/processed/*
 
 __pycache__/
 
