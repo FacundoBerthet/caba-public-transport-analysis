@@ -2,6 +2,8 @@
 
 > Data analysis project exploring how bus stops are distributed across Buenos Aires (CABA)
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://caba-public-transport-analysis-mxjtgaunapfehj73pqd5cf.streamlit.app/)
+
 ## What is this project about?
 
 This is my first complete data analysis project. I wanted to understand how public transportation works in Buenos Aires by looking at where bus stops are located throughout the city. The idea was simple: download some real data, clean it up, explore it, and create something visual that people can interact with.
